@@ -1,7 +1,7 @@
 ﻿
 namespace StoreApp.Forms.StaffForms
 {
-    partial class GetAll
+    partial class StaffGetAll
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace StoreApp.Forms.StaffForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetAll));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffGetAll));
             this.closeBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv = new System.Windows.Forms.DataGridView();

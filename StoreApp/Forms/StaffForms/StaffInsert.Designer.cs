@@ -1,7 +1,7 @@
 ﻿
 namespace StoreApp.Forms.StaffForms
 {
-    partial class Insert
+    partial class StaffInsert
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace StoreApp.Forms.StaffForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insert));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffInsert));
             this.panel1 = new System.Windows.Forms.Panel();
             this.departmentTb = new System.Windows.Forms.NumericUpDown();
             this.entrydateTb = new System.Windows.Forms.DateTimePicker();

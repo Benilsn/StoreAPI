@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace StoreApp.Forms.StaffForms
 {
-    public partial class Insert : Form
+    public partial class StaffInsert : Form
     {
 
         StaffController sc = new StaffController();
 
-        public Insert()
+        public StaffInsert()
         {
             InitializeComponent();
         }

@@ -1,38 +1,32 @@
-﻿using System;
+﻿using System.Data;
 using Store.controllers;
-using Store.database;
 using System.Windows.Forms;
+using Store.database;
 using System.Data.SqlClient;
-using System.Data;
 
-namespace StoreApp.Forms.StaffForms
+namespace StoreApp.Forms.ProductForms
 {
-    public partial class GetAll : Form
+    public partial class ProductGetAll : Form
     {
-        public GetAll()
+        public ProductGetAll()
         {
             InitializeComponent();
-            staffGetAll();
+            productGetAll();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void productGetAll()
         {
-            this.Close();
-        }
-
-
-        private void staffGetAll()
-        {
-            StaffController sc = new StaffController();
+            ProductController sc = new ProductController();
             DataBase db = new DataBase();
             try
             {
-                string sqlcmd = "SELECT Id,Name,Age,Role,EntryDate,Department FROM Staff";
+                string sqlcmd = "SELECT Id,Name,Price,Quantity,Category FROM Product";
 
                 SqlDataAdapter sda = new SqlDataAdapter(sqlcmd, db.getConnection);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                dgv.DataSource = dt;
+                dgvProduct.DataSource = dt;
             }
             catch (SqlException)
             {
@@ -45,9 +39,9 @@ namespace StoreApp.Forms.StaffForms
 
         }
 
-        private void refreshBtn_Click(object sender, EventArgs e)
+        private void closeBtn_Click(object sender, System.EventArgs e)
         {
-            staffGetAll();
+            this.Close();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace StoreApp.Forms
 {
-    partial class GetById
+    partial class StaffGetById
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace StoreApp.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetById));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffGetById));
             this.closeBtn = new System.Windows.Forms.Button();
             this.staffFormMainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -200,7 +200,7 @@ namespace StoreApp.Forms
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // GetById
+            // StaffGetById
             // 
             this.AcceptButton = this.closeBtn;
             this.AllowDrop = true;
@@ -212,7 +212,7 @@ namespace StoreApp.Forms
             this.Controls.Add(this.staffFormMainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "GetById";
+            this.Name = "StaffGetById";
             this.staffFormMainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace StoreApp.Forms
 {
-    public partial class GetById : Form
+    public partial class StaffGetById : Form
     {
-        public GetById()
+        public StaffGetById()
         {
             InitializeComponent();
         }

@@ -5,12 +5,12 @@ using Store.entities.Enum;
 
 namespace StoreApp.Forms.StaffForms
 {
-    public partial class Update : Form
+    public partial class StaffUpdate : Form
     {
         private Form currentForm;
         StaffController sc = new StaffController();
 
-        public Update()
+        public StaffUpdate()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace StoreApp.Forms.StaffForms
         // GET ALL BUTTON
         private void button1_Click(object sender, EventArgs e)
         {
-            openNew(new GetAll());
+            openNew(new StaffGetAll());
             
         }
 

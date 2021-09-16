@@ -26,8 +26,9 @@ C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\Stor
 C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.pdb
 C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.genruntimeconfig.cache
 C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Properties.Resources.resources
-C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.GetById.resources
-C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.GetAll.resources
-C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.Model.resources
-C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.Insert.resources
-C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.Update.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.ProductForms.ProductGetAll.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.StaffGetAll.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffGetById.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.StaffInsert.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.StaffUpdate.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.ProductForms.ProductGetById.resources

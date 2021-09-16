@@ -2,6 +2,7 @@
 using StoreApp.Forms;
 using System.Windows.Forms;
 using StoreApp.Forms.StaffForms;
+using StoreApp.Forms.ProductForms;
 
 namespace StoreApp
 {
@@ -36,25 +37,37 @@ namespace StoreApp
         // GET STAFF BY ID 
         private void getClientByIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openNew(new GetById());
+            openNew(new StaffGetById());
         }
 
         // GET ALL STAFF MEMBERS
         private void getAllClientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openNew(new GetAll());
+            openNew(new StaffGetAll());
         }
 
         // INSERT NEW STAFF MEMBER
         private void staffNewMember_Click(object sender, EventArgs e)
         {
-            openNew(new Insert());
+            openNew(new StaffInsert());
         }
 
         // UPDATE MEMBER
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openNew(new Update());
+            openNew(new StaffUpdate());
+        }
+
+        // GET ALL PRODUCT
+        private void getAllProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openNew(new ProductGetAll());
+        }
+
+        // GET BY ID PRODUCT
+        private void getProductByIdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openNew(new ProductGetById());
         }
     }
 }

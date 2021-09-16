@@ -1,7 +1,7 @@
 ﻿
 namespace StoreApp.Forms.StaffForms
 {
-    partial class Update
+    partial class StaffUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace StoreApp.Forms.StaffForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffUpdate));
             this.closeBtn = new System.Windows.Forms.Button();
             this.getAllBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
