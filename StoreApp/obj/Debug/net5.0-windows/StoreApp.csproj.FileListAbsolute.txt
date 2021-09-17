@@ -32,3 +32,5 @@ C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\Stor
 C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.StaffInsert.resources
 C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.StaffForms.StaffUpdate.resources
 C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.ProductForms.ProductGetById.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.ProductForms.ProductInsert.resources
+C:\Users\MICRO\OneDrive\Área de Trabalho\Visual Studio Workspace\C#\StoreM\StoreApp\obj\Debug\net5.0-windows\StoreApp.Forms.ProductForms.ProductUpdate.resources

@@ -69,5 +69,15 @@ namespace StoreApp
         {
             openNew(new ProductGetById());
         }
+
+        private void newProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openNew(new ProductInsert());
+        }
+
+        private void updateDeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openNew(new ProductUpdate());
+        }
     }
 }

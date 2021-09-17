@@ -67,10 +67,17 @@ namespace StoreApp.Forms.StaffForms
                 switch (cb)
                 {
                     case "Name":
-                        sc.updateName(id, updateTB.Text);
-                        idTb.Clear();
-                        updateTB.Clear();
-                        MessageBox.Show("Name updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (updateTB.Text.Length < 3)
+                        {
+                            MessageBox.Show("Name is to short!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            sc.updateName(id, updateTB.Text);
+                            idTb.Clear();
+                            updateTB.Clear();
+                            MessageBox.Show("Name updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                         break;
                     case "Age":
                         var age = int.Parse(updateTB.Text);
@@ -186,5 +193,6 @@ namespace StoreApp.Forms.StaffForms
             }
             
         }
+
     }
 }

@@ -195,12 +195,14 @@ namespace StoreApp
             this.newProductToolStripMenuItem.Name = "newProductToolStripMenuItem";
             this.newProductToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.newProductToolStripMenuItem.Text = "New Product";
+            this.newProductToolStripMenuItem.Click += new System.EventHandler(this.newProductToolStripMenuItem_Click);
             // 
             // updateDeleteToolStripMenuItem
             // 
             this.updateDeleteToolStripMenuItem.Name = "updateDeleteToolStripMenuItem";
             this.updateDeleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateDeleteToolStripMenuItem.Text = "Update/Delete";
+            this.updateDeleteToolStripMenuItem.Click += new System.EventHandler(this.updateDeleteToolStripMenuItem_Click);
             // 
             // clientTSMI
             // 

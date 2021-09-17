@@ -293,7 +293,7 @@ namespace StoreApp.Forms.StaffForms
             this.comboBox1.TabIndex = 32;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Update
+            // StaffUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +301,7 @@ namespace StoreApp.Forms.StaffForms
             this.ControlBox = false;
             this.Controls.Add(this.updateDesktop);
             this.Controls.Add(this.closeBtn);
-            this.Name = "Update";
+            this.Name = "StaffUpdate";
             this.RightToLeftLayout = true;
             this.panel1.ResumeLayout(false);
             this.updateDesktop.ResumeLayout(false);
