@@ -1467,16 +1467,16 @@
     <value>Russo One, 14.249999pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 10</value>
+    <value>70, 16</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 23</value>
+    <value>155, 23</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Member Data: </value>
+    <value>Member Data : </value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>

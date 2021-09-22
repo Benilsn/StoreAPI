@@ -108,7 +108,7 @@ namespace StoreApp.Forms.StaffForms
             // 
             // deleteBtn
             // 
-            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.deleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.deleteBtn.FlatAppearance.BorderSize = 0;
             this.deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -129,7 +129,7 @@ namespace StoreApp.Forms.StaffForms
             // 
             // updateBtn
             // 
-            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.updateBtn.FlatAppearance.BorderSize = 0;
             this.updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;

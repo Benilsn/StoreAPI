@@ -8,7 +8,7 @@ using Store.entities;
 
 namespace Store.controllers
 {
-    class ClientController : IController<Client>
+    public class ClientController : IController<Client>
     {
 
         DataBase db = new DataBase();

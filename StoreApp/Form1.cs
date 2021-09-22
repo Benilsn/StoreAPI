@@ -3,6 +3,7 @@ using StoreApp.Forms;
 using System.Windows.Forms;
 using StoreApp.Forms.StaffForms;
 using StoreApp.Forms.ProductForms;
+using StoreApp.Forms.ClientForms;
 
 namespace StoreApp
 {
@@ -70,14 +71,28 @@ namespace StoreApp
             openNew(new ProductGetById());
         }
 
+        //INSERT PRODUCT
         private void newProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openNew(new ProductInsert());
         }
 
+        //UPDATE PRODUCT
         private void updateDeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openNew(new ProductUpdate());
+        }
+
+        // GET ALL CLIENTS
+        private void getAllClientsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openNew(new ClientGetAll());
+        }
+
+        // GET CLIENT BY ID
+        private void getClientByIDToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openNew(new ClientGetById());
         }
     }
 }

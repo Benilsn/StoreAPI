@@ -221,27 +221,29 @@ namespace StoreApp
             this.getClientByIDToolStripMenuItem1,
             this.getAllClientsToolStripMenuItem1});
             this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
-            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.viewToolStripMenuItem1.Text = "View";
             // 
             // getClientByIDToolStripMenuItem1
             // 
             this.getClientByIDToolStripMenuItem1.Name = "getClientByIDToolStripMenuItem1";
-            this.getClientByIDToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.getClientByIDToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.getClientByIDToolStripMenuItem1.Text = "Get Client by ID";
+            this.getClientByIDToolStripMenuItem1.Click += new System.EventHandler(this.getClientByIDToolStripMenuItem1_Click);
             // 
             // getAllClientsToolStripMenuItem1
             // 
             this.getAllClientsToolStripMenuItem1.Name = "getAllClientsToolStripMenuItem1";
-            this.getAllClientsToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.getAllClientsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.getAllClientsToolStripMenuItem1.Text = "Get all Clients";
+            this.getAllClientsToolStripMenuItem1.Click += new System.EventHandler(this.getAllClientsToolStripMenuItem1_Click);
             // 
             // insertToolStripMenuItem1
             // 
             this.insertToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newProductToolStripMenuItem1});
             this.insertToolStripMenuItem1.Name = "insertToolStripMenuItem1";
-            this.insertToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.insertToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.insertToolStripMenuItem1.Text = "Insert";
             // 
             // newProductToolStripMenuItem1
@@ -253,7 +255,7 @@ namespace StoreApp
             // updateDeleteToolStripMenuItem1
             // 
             this.updateDeleteToolStripMenuItem1.Name = "updateDeleteToolStripMenuItem1";
-            this.updateDeleteToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.updateDeleteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.updateDeleteToolStripMenuItem1.Text = "Update/Delete";
             // 
             // desktopPanel
