@@ -50,7 +50,7 @@ namespace StoreApp.Forms.StaffForms
                     s.Role = roleTb.Text;
                     if (entrydateTb.Value.Date > DateTime.Now)
                     {
-                        MessageBox.Show("Please chosse a valid date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please choose a valid date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {

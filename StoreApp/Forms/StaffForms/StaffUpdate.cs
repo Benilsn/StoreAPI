@@ -64,87 +64,90 @@ namespace StoreApp.Forms.StaffForms
             }
             else
             {
-                switch (cb)
+                if (cb == null)
                 {
-                    case "Name":
-                        if (updateTB.Text.Length < 3)
-                        {
-                            MessageBox.Show("Name is to short!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            sc.updateName(id, updateTB.Text);
-                            idTb.Clear();
-                            updateTB.Clear();
-                            MessageBox.Show("Name updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        break;
-                    case "Age":
-                        var age = int.Parse(updateTB.Text);
-                        if (age.GetType().Equals(typeof(string)))
-                        {
-                            MessageBox.Show("Please choose a valid age!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            sc.updateAge(id, int.Parse(updateTB.Text));
-                            idTb.Clear();
-                            updateTB.Clear();
-                            MessageBox.Show("Age updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        break;
-
-                    case "Role":
-                        sc.updateRole(id, updateTB.Text);
-                        idTb.Clear();
-                        updateTB.Clear();
-                        MessageBox.Show("Role updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    case "EntryDate":
-
-                        DateTime date;
-                        var date2 = DateTime.TryParse(updateTB.Text, out date);
-                        if (date2 == false)
-                        {
-                            MessageBox.Show("Invalid date format\ndd/mm/yyyy!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {                           
-                            if (date > DateTime.Now)
+                    MessageBox.Show("Select something to update!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    switch (cb)
+                    {
+                        case "Name":
+                            if (updateTB.Text.Length < 3)
                             {
-                                MessageBox.Show("Invalid date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Name is to short!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                sc.updateEntryDate(id, DateTime.Parse(updateTB.Text));
+                                sc.updateName(id, updateTB.Text);
                                 idTb.Clear();
                                 updateTB.Clear();
-                                MessageBox.Show("EntryDate updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Name updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
-                        }
-                        break;
-                    case "Department":
-                        Department dp;
-                        bool boolDp = Enum.TryParse(updateTB.Text, out dp);
-                        if (boolDp == false)
-                        {
-                            MessageBox.Show("Invalid department type!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else if (int.Parse(updateTB.Text) > 11)
-                        {
-                            MessageBox.Show("Invalid department!\nChoose 1 to 11", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            sc.updateDepartment(id, (Department)Enum.Parse(typeof(Department), updateTB.Text));
+                            break;
+                        case "Age":
+                            var age = int.Parse(updateTB.Text);
+                            if (age.GetType().Equals(typeof(string)))
+                            {
+                                MessageBox.Show("Please choose a valid age!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                sc.updateAge(id, int.Parse(updateTB.Text));
+                                idTb.Clear();
+                                updateTB.Clear();
+                                MessageBox.Show("Age updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            break;
+
+                        case "Role":
+                            sc.updateRole(id, updateTB.Text);
                             idTb.Clear();
                             updateTB.Clear();
-                            MessageBox.Show("Department updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        break;
-                    case "":
-                        MessageBox.Show("Select something to update!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
+                            MessageBox.Show("Role updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        case "EntryDate":
+
+                            DateTime date;
+                            var date2 = DateTime.TryParse(updateTB.Text, out date);
+                            if (date2 == false)
+                            {
+                                MessageBox.Show("Invalid date format\ndd/mm/yyyy!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                if (date > DateTime.Now)
+                                {
+                                    MessageBox.Show("Invalid date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                else
+                                {
+                                    sc.updateEntryDate(id, DateTime.Parse(updateTB.Text));
+                                    idTb.Clear();
+                                    updateTB.Clear();
+                                    MessageBox.Show("EntryDate updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            break;
+                        case "Department":
+                            Department dp;
+                            bool boolDp = Enum.TryParse(updateTB.Text, out dp);
+                            if (boolDp == false)
+                            {
+                                MessageBox.Show("Invalid department type!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else if (int.Parse(updateTB.Text) > 11)
+                            {
+                                MessageBox.Show("Invalid department!\nChoose 1 to 11", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                sc.updateDepartment(id, (Department)Enum.Parse(typeof(Department), updateTB.Text));
+                                idTb.Clear();
+                                updateTB.Clear();
+                                MessageBox.Show("Department updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            break;
+                    }
                 }
             }
         }

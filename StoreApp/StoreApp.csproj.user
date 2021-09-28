@@ -10,6 +10,12 @@
     <Compile Update="Forms\ClientForms\ClientGetById.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ClientForms\ClientInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ClientForms\ClientUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\ProductForms\ProductGetAll.cs">
       <SubType>Form</SubType>
     </Compile>

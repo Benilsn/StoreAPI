@@ -67,6 +67,7 @@ namespace Store.controllers
                         c.Age = dr.GetInt32(dr.GetOrdinal("Age"));
                         c.Date = dr.GetDateTime(dr.GetOrdinal("MemberSince"));
                         c.Phone = dr.GetString(dr.GetOrdinal("Phone"));
+                        db.Disconnect(db.getConnection);
                         return c;
                     }
 

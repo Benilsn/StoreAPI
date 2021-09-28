@@ -94,5 +94,17 @@ namespace StoreApp
         {
             openNew(new ClientGetById());
         }
+
+        //  INSERT CLIENT
+        private void newProductToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openNew(new ClientInsert());
+        }
+
+        // UPDATE CLIENT
+        private void updateDeleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openNew(new ClientUpdate());
+        }
     }
 }

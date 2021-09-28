@@ -1,7 +1,7 @@
 ﻿
-namespace StoreApp.Forms.ProductForms
+namespace StoreApp.Forms.ClientForms
 {
-    partial class ProductUpdate
+    partial class ClientUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -29,32 +29,32 @@ namespace StoreApp.Forms.ProductForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductUpdate));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientUpdate));
             this.panel1 = new System.Windows.Forms.Panel();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.getAllBtn = new System.Windows.Forms.Button();
-            this.productUpdateDesktop = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.deletePN = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.deleteIdTb = new System.Windows.Forms.TextBox();
             this.deleteSubmitBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.updatePN = new System.Windows.Forms.Panel();
             this.updateLb = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.idTb = new System.Windows.Forms.TextBox();
+            this.idTB = new System.Windows.Forms.TextBox();
             this.submitBtn = new System.Windows.Forms.Button();
             this.updateTB = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.productUpdateDesktop.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.deletePN.SuspendLayout();
+            this.updatePN.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(12)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(53)))), ((int)(((byte)(85)))));
             this.panel1.Controls.Add(this.deleteBtn);
             this.panel1.Controls.Add(this.updateBtn);
             this.panel1.Controls.Add(this.getAllBtn);
@@ -66,7 +66,7 @@ namespace StoreApp.Forms.ProductForms
             // 
             // deleteBtn
             // 
-            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.deleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.deleteBtn.FlatAppearance.BorderSize = 0;
             this.deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -79,7 +79,7 @@ namespace StoreApp.Forms.ProductForms
             this.deleteBtn.Location = new System.Drawing.Point(34, 81);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(132, 42);
-            this.deleteBtn.TabIndex = 34;
+            this.deleteBtn.TabIndex = 37;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.deleteBtn.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@ namespace StoreApp.Forms.ProductForms
             // 
             // updateBtn
             // 
-            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(255)))), ((int)(((byte)(211)))));
+            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.updateBtn.FlatAppearance.BorderSize = 0;
             this.updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -99,7 +99,7 @@ namespace StoreApp.Forms.ProductForms
             this.updateBtn.Location = new System.Drawing.Point(34, 18);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(132, 44);
-            this.updateBtn.TabIndex = 33;
+            this.updateBtn.TabIndex = 36;
             this.updateBtn.Text = "Update";
             this.updateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.updateBtn.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@ namespace StoreApp.Forms.ProductForms
             // 
             // getAllBtn
             // 
-            this.getAllBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(133)))), ((int)(((byte)(155)))));
+            this.getAllBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(203)))), ((int)(((byte)(255)))));
             this.getAllBtn.FlatAppearance.BorderSize = 0;
             this.getAllBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.getAllBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -119,35 +119,35 @@ namespace StoreApp.Forms.ProductForms
             this.getAllBtn.Location = new System.Drawing.Point(34, 373);
             this.getAllBtn.Name = "getAllBtn";
             this.getAllBtn.Size = new System.Drawing.Size(132, 59);
-            this.getAllBtn.TabIndex = 32;
-            this.getAllBtn.Text = "Get all products";
+            this.getAllBtn.TabIndex = 35;
+            this.getAllBtn.Text = "Get all Clients";
             this.getAllBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.getAllBtn.UseVisualStyleBackColor = false;
             this.getAllBtn.Click += new System.EventHandler(this.getAllBtn_Click);
             // 
-            // productUpdateDesktop
+            // panel2
             // 
-            this.productUpdateDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(184)))), ((int)(((byte)(154)))));
-            this.productUpdateDesktop.Controls.Add(this.panel3);
-            this.productUpdateDesktop.Controls.Add(this.panel2);
-            this.productUpdateDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productUpdateDesktop.Location = new System.Drawing.Point(200, 0);
-            this.productUpdateDesktop.Name = "productUpdateDesktop";
-            this.productUpdateDesktop.Size = new System.Drawing.Size(344, 450);
-            this.productUpdateDesktop.TabIndex = 0;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(106)))), ((int)(((byte)(129)))));
+            this.panel2.Controls.Add(this.deletePN);
+            this.panel2.Controls.Add(this.updatePN);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(344, 450);
+            this.panel2.TabIndex = 0;
             // 
-            // panel3
+            // deletePN
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.deleteIdTb);
-            this.panel3.Controls.Add(this.deleteSubmitBtn);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 195);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(344, 120);
-            this.panel3.TabIndex = 0;
-            this.panel3.Visible = false;
+            this.deletePN.BackColor = System.Drawing.Color.Gray;
+            this.deletePN.Controls.Add(this.label3);
+            this.deletePN.Controls.Add(this.deleteIdTb);
+            this.deletePN.Controls.Add(this.deleteSubmitBtn);
+            this.deletePN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deletePN.Location = new System.Drawing.Point(0, 195);
+            this.deletePN.Name = "deletePN";
+            this.deletePN.Size = new System.Drawing.Size(344, 120);
+            this.deletePN.TabIndex = 1;
+            this.deletePN.Visible = false;
             // 
             // label3
             // 
@@ -180,21 +180,21 @@ namespace StoreApp.Forms.ProductForms
             this.deleteSubmitBtn.UseVisualStyleBackColor = false;
             this.deleteSubmitBtn.Click += new System.EventHandler(this.deleteSubmitBtn_Click);
             // 
-            // panel2
+            // updatePN
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Controls.Add(this.updateLb);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.idTb);
-            this.panel2.Controls.Add(this.submitBtn);
-            this.panel2.Controls.Add(this.updateTB);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 195);
-            this.panel2.TabIndex = 0;
-            this.panel2.Visible = false;
+            this.updatePN.BackColor = System.Drawing.Color.Gray;
+            this.updatePN.Controls.Add(this.updateLb);
+            this.updatePN.Controls.Add(this.label2);
+            this.updatePN.Controls.Add(this.idTB);
+            this.updatePN.Controls.Add(this.submitBtn);
+            this.updatePN.Controls.Add(this.updateTB);
+            this.updatePN.Controls.Add(this.comboBox1);
+            this.updatePN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.updatePN.Location = new System.Drawing.Point(0, 0);
+            this.updatePN.Name = "updatePN";
+            this.updatePN.Size = new System.Drawing.Size(344, 195);
+            this.updatePN.TabIndex = 2;
+            this.updatePN.Visible = false;
             // 
             // updateLb
             // 
@@ -216,12 +216,12 @@ namespace StoreApp.Forms.ProductForms
             this.label2.TabIndex = 44;
             this.label2.Text = "ID:";
             // 
-            // idTb
+            // idTB
             // 
-            this.idTb.Location = new System.Drawing.Point(20, 92);
-            this.idTb.Name = "idTb";
-            this.idTb.Size = new System.Drawing.Size(100, 23);
-            this.idTb.TabIndex = 43;
+            this.idTB.Location = new System.Drawing.Point(20, 92);
+            this.idTB.Name = "idTB";
+            this.idTB.Size = new System.Drawing.Size(100, 23);
+            this.idTB.TabIndex = 43;
             // 
             // submitBtn
             // 
@@ -247,30 +247,30 @@ namespace StoreApp.Forms.ProductForms
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Name",
-            "Price",
-            "Quantity",
-            "Category"});
+            "Age",
+            "MemberSince",
+            "Phone"});
             this.comboBox1.Location = new System.Drawing.Point(20, 30);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 24);
             this.comboBox1.TabIndex = 40;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // ProductUpdate
+            // ClientUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.productUpdateDesktop);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "ProductUpdate";
+            this.Name = "ClientUpdate";
             this.panel1.ResumeLayout(false);
-            this.productUpdateDesktop.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.deletePN.ResumeLayout(false);
+            this.deletePN.PerformLayout();
+            this.updatePN.ResumeLayout(false);
+            this.updatePN.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -278,20 +278,20 @@ namespace StoreApp.Forms.ProductForms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel productUpdateDesktop;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button getAllBtn;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox idTb;
-        private System.Windows.Forms.Button submitBtn;
-        private System.Windows.Forms.TextBox updateTB;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel deletePN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox deleteIdTb;
         private System.Windows.Forms.Button deleteSubmitBtn;
+        private System.Windows.Forms.Panel updatePN;
         private System.Windows.Forms.Label updateLb;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox idTB;
+        private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.TextBox updateTB;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
