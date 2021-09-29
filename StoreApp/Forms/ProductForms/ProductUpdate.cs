@@ -65,12 +65,13 @@ namespace StoreApp.Forms.ProductForms
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
-        {
-            var cb = comboBox1.SelectedItem;
-            var id = long.Parse(idTb.Text);
+        {        
 
             try
             {
+                var cb = comboBox1.SelectedItem;
+                var id = long.Parse(idTb.Text);
+
                 if (pc.getById(id) == null)
                 {
                     MessageBox.Show("ID Not Found!", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -171,10 +172,10 @@ namespace StoreApp.Forms.ProductForms
 
         private void deleteSubmitBtn_Click(object sender, EventArgs e)
         {
-            var id = long.Parse(deleteIdTb.Text);
 
             try
             {
+                var id = long.Parse(deleteIdTb.Text);
                 if (pc.getById(id) == null)
                 {
                     MessageBox.Show("ID Not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
