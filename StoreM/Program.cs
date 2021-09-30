@@ -1,8 +1,5 @@
-﻿using System;
-using Store.entities;
-using Store.controllers;
-using Store.entities.Enum;
-
+﻿using Store.controllers;
+using System;
 
 namespace StoreM
 {
@@ -14,17 +11,7 @@ namespace StoreM
             StaffController sc = new StaffController();
             ProductController pc = new ProductController();
 
-
-
-            
             Console.WriteLine(sc.getById(203051));
-
-
-
-
-
-
-
 
 
         }

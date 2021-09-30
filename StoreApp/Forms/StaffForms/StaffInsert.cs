@@ -89,7 +89,7 @@ namespace StoreApp.Forms.StaffForms
             ageTb.Clear();
             roleTb.Clear();
             departmentTb.Value = 0;
-                       
+
         }
     }
 }

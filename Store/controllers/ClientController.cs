@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
-using Store.controllers.icontroller;
+﻿using Store.controllers.icontroller;
 using Store.database;
 using Store.entities;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace Store.controllers
 {
@@ -112,18 +111,18 @@ namespace Store.controllers
 
         public void deleteById(long id)
         {
-            using(SqlCommand cmd = new SqlCommand())
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "DELETE FROM Client WHERE Id = @id";
                 cmd.Connection = db.getConnection;
                 cmd.Parameters.AddWithValue("@id", id);
-                
+
                 try
                 {
                     db.Connect();
                     cmd.ExecuteReader();
                 }
-                catch(SqlException e)
+                catch (SqlException e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -132,7 +131,7 @@ namespace Store.controllers
                     db.Disconnect(db.getConnection);
                 }
             }
-        } 
+        }
 
         public void updateName(long id, string name)
         {
@@ -148,7 +147,7 @@ namespace Store.controllers
                 {
                     cmd.ExecuteReader();
                 }
-                catch(SqlException e)
+                catch (SqlException e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -267,6 +266,6 @@ namespace Store.controllers
             }
         }
 
-        
+
     }
 }

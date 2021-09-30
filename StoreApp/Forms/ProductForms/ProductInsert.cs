@@ -73,5 +73,5 @@ namespace StoreApp.Forms.ProductForms
                 MessageBox.Show("Invalid Price!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       }
     }
+}

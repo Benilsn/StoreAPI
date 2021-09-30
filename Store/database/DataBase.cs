@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Store.database
 {
-    public class DataBase 
+    public class DataBase
     {
 
         private SqlConnection con = new SqlConnection("Data Source=MACHINE;Initial Catalog=Stor;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -40,13 +40,13 @@ namespace Store.database
                     Console.WriteLine("Connection Already closed!");
                 }
             }
-            catch(SqlException e)
+            catch (SqlException e)
             {
                 Console.WriteLine(e.Message);
             }
         }
 
 
-        
+
     }
 }

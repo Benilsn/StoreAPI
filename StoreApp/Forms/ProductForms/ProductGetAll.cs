@@ -1,8 +1,8 @@
-﻿using System.Data;
-using Store.controllers;
-using System.Windows.Forms;
+﻿using Store.controllers;
 using Store.database;
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace StoreApp.Forms.ProductForms
 {

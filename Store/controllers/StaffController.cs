@@ -1,10 +1,10 @@
-﻿using System;
-using Store.controllers.icontroller;
+﻿using Store.controllers.icontroller;
+using Store.database;
 using Store.entities;
+using Store.entities.Enum;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using Store.database;
-using Store.entities.Enum;
 
 namespace Store.controllers
 {
@@ -24,7 +24,8 @@ namespace Store.controllers
                 {
                     db.Connect();
                     cmd.ExecuteReader();
-                }catch(SqlException e)
+                }
+                catch (SqlException e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -37,13 +38,13 @@ namespace Store.controllers
 
         public List<Staff> getAll()
         {
-            using(SqlCommand cmd = new SqlCommand())
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "SELECT * FROM Staff";
                 cmd.Connection = db.getConnection;
                 db.Connect();
 
-                using(SqlDataReader dr = cmd.ExecuteReader())
+                using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     if (dr.HasRows)
                     {
@@ -60,10 +61,10 @@ namespace Store.controllers
                             var field = (string)dr["Department"];
                             s.Department = (Department)Enum.Parse(typeof(Department), field);
                             list.Add(s);
-                                                     
+
                         }
                         db.Disconnect(db.getConnection);
-                        return list; 
+                        return list;
                     }
                 }
             }
@@ -132,7 +133,7 @@ namespace Store.controllers
             catch (NullReferenceException)
             {
                 return null;
-                throw;               
+                throw;
             }
         }
 
@@ -168,7 +169,7 @@ namespace Store.controllers
                     db.Disconnect(db.getConnection);
                 }
             }
-                
+
         }
 
         public void updateAll(long id, Staff o)
@@ -228,9 +229,9 @@ namespace Store.controllers
             }
         }
 
-        public void updateAge(long id, int age) 
+        public void updateAge(long id, int age)
         {
-            using(SqlCommand cmd = new SqlCommand())
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "UPDATE Staff SET Age = @age WHERE Id = @id";
                 cmd.Connection = db.getConnection;
@@ -254,7 +255,7 @@ namespace Store.controllers
             }
         }
 
-        public void updateRole(long id, string role) 
+        public void updateRole(long id, string role)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
@@ -279,8 +280,8 @@ namespace Store.controllers
                 }
             }
         }
-        public void updateEntryDate(long id, DateTime entrydate) 
-        { 
+        public void updateEntryDate(long id, DateTime entrydate)
+        {
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "UPDATE Staff SET EntryDate = @entrydate WHERE Id = @id";
@@ -306,8 +307,8 @@ namespace Store.controllers
             }
         }
 
-        public void updateDepartment(long id, Department department) 
-        { 
+        public void updateDepartment(long id, Department department)
+        {
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "UPDATE Staff SET Department = @department WHERE Id = @id";

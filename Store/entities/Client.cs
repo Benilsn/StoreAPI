@@ -39,7 +39,7 @@ namespace Store.entities
             get { return age; }
             set { age = value; }
         }
-        
+
         public DateTime Date
         {
             get { return memberSince; }
@@ -51,7 +51,7 @@ namespace Store.entities
             get { return phone; }
             set { phone = value; }
         }
-           
+
         public string toString()
         {
             return "Name = " + this.name +

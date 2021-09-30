@@ -1,5 +1,5 @@
-﻿using System;
-using Store.entities.Enum;
+﻿using Store.entities.Enum;
+using System;
 
 namespace Store.entities
 {
@@ -15,7 +15,7 @@ namespace Store.entities
 
         public Staff() { }
 
-        public Staff(string name, int age, string role, DateTime entry_date, Department dp) 
+        public Staff(string name, int age, string role, DateTime entry_date, Department dp)
         {
             this.name = name;
             this.age = age;

@@ -1,9 +1,9 @@
-﻿using System;
-using StoreApp.Forms;
-using System.Windows.Forms;
-using StoreApp.Forms.StaffForms;
-using StoreApp.Forms.ProductForms;
+﻿using StoreApp.Forms;
 using StoreApp.Forms.ClientForms;
+using StoreApp.Forms.ProductForms;
+using StoreApp.Forms.StaffForms;
+using System;
+using System.Windows.Forms;
 
 namespace StoreApp
 {
@@ -11,7 +11,7 @@ namespace StoreApp
     {
 
         private Form currentForm;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace StoreApp
             desktopPanel.Controls.Add(newForm);
             newForm.BringToFront();
             newForm.Show();
-            
+
         }
 
 

@@ -32,7 +32,7 @@ namespace StoreApp.Forms.ProductForms
             openNew(new ProductGetAll());
         }
 
-        
+
         private void updateBtn_Click(object sender, EventArgs e)
         {
             if (panel2.Visible == true)
@@ -61,11 +61,11 @@ namespace StoreApp.Forms.ProductForms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateLb.Text = "New "+comboBox1.SelectedItem.ToString() + ": ";
+            updateLb.Text = "New " + comboBox1.SelectedItem.ToString() + ": ";
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
-        {        
+        {
 
             try
             {

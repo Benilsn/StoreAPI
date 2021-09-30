@@ -63,7 +63,7 @@ namespace StoreApp.Forms.ClientForms
 
         private void deleteSubmitBtn_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 var id = long.Parse(deleteIdTb.Text);
@@ -86,7 +86,7 @@ namespace StoreApp.Forms.ClientForms
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
-        {       
+        {
             try
             {
                 var cb = comboBox1.SelectedItem;
@@ -159,7 +159,7 @@ namespace StoreApp.Forms.ClientForms
                                         cc.updateDate(id, DateTime.Parse(updateTB.Text));
                                         idTB.Clear();
                                         updateTB.Clear();
-                                        MessageBox.Show("Date updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                                       
+                                        MessageBox.Show("Date updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     }
                                 }
                                 break;
@@ -174,7 +174,7 @@ namespace StoreApp.Forms.ClientForms
                                 {
                                     cc.updatePhone(id, updateTB.Text);
                                     break;
-                                }                                                                                                                   
+                                }
                         }
                     }
                 }

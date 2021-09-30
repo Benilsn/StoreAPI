@@ -40,19 +40,23 @@ namespace StoreApp.Forms.ClientForms
                     {
                         MessageBox.Show("Invalid Name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }else if (int.Parse(ageTB.Text) < 12)
+                    }
+                    else if (int.Parse(ageTB.Text) < 12)
                     {
                         MessageBox.Show("Invalid Age!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }else if (phoneTB.Text.Length < 8)
+                    }
+                    else if (phoneTB.Text.Length < 8)
                     {
                         MessageBox.Show("Phone number its too short!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }else if (phoneTB.Text.Length > 11)
+                    }
+                    else if (phoneTB.Text.Length > 11)
                     {
                         MessageBox.Show("Phone number its too big!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }else if (memberSinceTB.Value.Date > DateTime.Now)
+                    }
+                    else if (memberSinceTB.Value.Date > DateTime.Now)
                     {
                         MessageBox.Show("You cannot choose a future date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -71,7 +75,7 @@ namespace StoreApp.Forms.ClientForms
                     nameTB.Focus();
                 }
             }
-            catch(SqlException)
+            catch (SqlException)
             {
                 MessageBox.Show("Untreated!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -1,12 +1,5 @@
 ﻿using Store.controllers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StoreApp.Forms.ClientForms
@@ -40,7 +33,7 @@ namespace StoreApp.Forms.ClientForms
                     clientID.Text = idTB.Text;
                     clientName.Text = client.Name;
                     clientAge.Text = client.Age.ToString();
-                    clientMemberSince.Text = client.Date.ToString().Substring(0,10);
+                    clientMemberSince.Text = client.Date.ToString().Substring(0, 10);
                     clientPhone.Text = client.Phone;
 
                     idTB.Clear();

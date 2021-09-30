@@ -1,7 +1,7 @@
-﻿using System;
-using Store.controllers;
-using System.Windows.Forms;
+﻿using Store.controllers;
 using Store.entities.Enum;
+using System;
+using System.Windows.Forms;
 
 namespace StoreApp.Forms.StaffForms
 {
@@ -36,7 +36,7 @@ namespace StoreApp.Forms.StaffForms
         private void button1_Click(object sender, EventArgs e)
         {
             openNew(new StaffGetAll());
-            
+
         }
 
         //UPDATE BUTTON
@@ -50,11 +50,11 @@ namespace StoreApp.Forms.StaffForms
             {
                 delPn.Visible = false;
                 updatePanel.Visible = true;
-            }            
+            }
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
-        {         
+        {
 
             try
             {
@@ -163,7 +163,7 @@ namespace StoreApp.Forms.StaffForms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateLb.Text = "New "+comboBox1.SelectedItem.ToString()+": ";
+            updateLb.Text = "New " + comboBox1.SelectedItem.ToString() + ": ";
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -203,7 +203,7 @@ namespace StoreApp.Forms.StaffForms
             {
                 MessageBox.Show("Invalid ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
     }

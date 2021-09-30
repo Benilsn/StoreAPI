@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using Store.controllers.icontroller;
+using Store.database;
 using Store.entities;
 using Store.entities.Enum;
-using Store.controllers.icontroller;
-using Store.database;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace Store.controllers
 {
@@ -43,10 +43,10 @@ namespace Store.controllers
             {
                 cmd.CommandText = "SELECT * FROM Product";
                 cmd.Connection = db.getConnection;
-                
+
                 db.Connect();
 
-                using(SqlDataReader dr = cmd.ExecuteReader())
+                using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     if (dr.HasRows)
                     {
@@ -61,7 +61,7 @@ namespace Store.controllers
                             p.Quantity = dr.GetInt32(dr.GetOrdinal("Quantity"));
                             var field = (string)dr["Category"];
                             p.Category = (Category)Enum.Parse(typeof(Category), field);
-                            
+
                             list.Add(p);
 
                         }
@@ -72,7 +72,7 @@ namespace Store.controllers
                 db.Disconnect(db.getConnection);
                 return null;
             }
-        } 
+        }
 
         public Product getById(long id)
         {
@@ -97,7 +97,7 @@ namespace Store.controllers
                         p.Category = (Category)Enum.Parse(typeof(Category), field);
 
                         db.Disconnect(db.getConnection);
-                        return p;                        
+                        return p;
                     }
                 }
                 db.Disconnect(db.getConnection);
@@ -157,7 +157,7 @@ namespace Store.controllers
                 {
                     cmd.ExecuteNonQuery();
                 }
-                catch(SqlException e)
+                catch (SqlException e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -196,7 +196,7 @@ namespace Store.controllers
 
         public void updatePrice(long id, double price)
         {
-            using(SqlCommand cmd = new SqlCommand())
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "UPDATE Product SET Price = @price WHERE Id = @id";
                 cmd.Connection = db.getConnection;
@@ -221,7 +221,7 @@ namespace Store.controllers
 
         public void updateQuantity(long id, int quantity)
         {
-            using(SqlCommand cmd = new SqlCommand())
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "UPDATE Product SET Quantity = @quantity WHERE Id = @id";
                 cmd.Connection = db.getConnection;
@@ -246,7 +246,7 @@ namespace Store.controllers
 
         public void updateCategory(long id, Category category)
         {
-            using(SqlCommand cmd = new SqlCommand())
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "UPDATE Product SET Category = @category WHERE Id = @id";
                 cmd.Connection = db.getConnection;
