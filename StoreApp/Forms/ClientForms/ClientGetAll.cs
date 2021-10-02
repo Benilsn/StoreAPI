@@ -22,7 +22,7 @@ namespace StoreApp.Forms.ClientForms
 
         public void clientGetAll()
         {
-            ClientController cc = new ClientController();
+            ClientRepository cc = new ClientRepository();
             DataBase db = new DataBase();
             try
             {

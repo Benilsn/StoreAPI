@@ -17,7 +17,7 @@ namespace StoreApp.Forms.ProductForms
 
         private void productGetAll()
         {
-            ProductController sc = new ProductController();
+            ProductRepository sc = new ProductRepository();
             DataBase db = new DataBase();
             try
             {

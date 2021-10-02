@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lA64Mwf1sPOfyuPnaQHK2NebJTrRPq7s1e/5xNTf4ilKYkjufSA4wEY0R+Hq1ymTHs7GG9mhE5hS7jWnlKJGag==",
+  "dgSpecHash": "mq64FRyfKO4Bu5VYMIt0t5Re+A81wEjl6mxCriWZ1z9BhVa43BPjG9/s141i6qqaku5zz6VYuPtmhXLnshR2yA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MICRO\\OneDrive\\Área de Trabalho\\Visual Studio Workspace\\C#\\StoreM\\StoreApp\\StoreApp.csproj",
+  "projectFilePath": "C:\\Users\\MICRO\\OneDrive\\Área de Trabalho\\Visual Studio Workspace\\C#\\StoreAPI\\StoreApp\\StoreApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MICRO\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\MICRO\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

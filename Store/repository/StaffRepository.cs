@@ -1,4 +1,4 @@
-﻿using Store.controllers.icontroller;
+﻿using Store.repository.irepository;
 using Store.database;
 using Store.entities;
 using Store.entities.Enum;
@@ -8,16 +8,15 @@ using System.Data.SqlClient;
 
 namespace Store.controllers
 {
-    public class ProductController : IController<Product>
+    public class StaffRepository : IRepository<Staff>
     {
 
         DataBase db = new DataBase();
-
         public void deleteById(long id)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "DELETE FROM Product WHERE Id = @id";
+                cmd.CommandText = "DELETE FROM Staff WHERE Id = @id";
                 cmd.Connection = db.getConnection;
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -37,87 +36,121 @@ namespace Store.controllers
             }
         }
 
-        public List<Product> getAll()
+        public List<Staff> getAll()
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "SELECT * FROM Product";
+                cmd.CommandText = "SELECT * FROM Staff";
                 cmd.Connection = db.getConnection;
-
                 db.Connect();
 
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     if (dr.HasRows)
                     {
-                        List<Product> list = new List<Product>();
+                        List<Staff> list = new List<Staff>();
 
                         while (dr.Read())
                         {
-                            Product p = new Product();
+                            Staff s = new Staff();
 
-                            p.Name = dr.GetString(dr.GetOrdinal("Name"));
-                            p.Price = dr.GetDouble(dr.GetOrdinal("Price"));
-                            p.Quantity = dr.GetInt32(dr.GetOrdinal("Quantity"));
-                            var field = (string)dr["Category"];
-                            p.Category = (Category)Enum.Parse(typeof(Category), field);
-
-                            list.Add(p);
+                            s.Name = dr.GetString(dr.GetOrdinal("Name"));
+                            s.Age = dr.GetInt32(dr.GetOrdinal("Age"));
+                            s.Role = dr.GetString(dr.GetOrdinal("Role"));
+                            s.Entry_Date = dr.GetDateTime(dr.GetOrdinal("EntryDate"));
+                            var field = (string)dr["Department"];
+                            s.Department = (Department)Enum.Parse(typeof(Department), field);
+                            list.Add(s);
 
                         }
                         db.Disconnect(db.getConnection);
                         return list;
                     }
                 }
-                db.Disconnect(db.getConnection);
-                return null;
             }
+            return null;
+            db.Disconnect(db.getConnection);
         }
 
-        public Product getById(long id)
+        public long getByName(string name)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "SELECT * FROM Product WHERE Id = @id";
+                cmd.CommandText = "SELECT Id FROM Staff WHERE Name = @name";
                 cmd.Connection = db.getConnection;
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@name", name);
                 db.Connect();
 
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     if (dr.HasRows)
                     {
-                        Product p = new Product();
                         dr.Read();
 
-                        p.Name = dr.GetString(dr.GetOrdinal("Name"));
-                        p.Price = dr.GetDouble(dr.GetOrdinal("Price"));
-                        p.Quantity = dr.GetInt32(dr.GetOrdinal("Quantity"));
-                        var field = (string)dr["Category"];
-                        p.Category = (Category)Enum.Parse(typeof(Category), field);
-
+                        long ident = dr.GetInt32(dr.GetOrdinal("Id"));
                         db.Disconnect(db.getConnection);
-                        return p;
+                        return ident;
                     }
                 }
                 db.Disconnect(db.getConnection);
-                return null;
+                return 0;
             }
         }
 
-        public void insert(Product o)
+        public Staff getById(long id)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Staff WHERE Id = @id";
+                    cmd.Connection = db.getConnection;
+                    cmd.Parameters.AddWithValue("@id", id);
+                    db.Connect();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            Staff s = new Staff();
+                            dr.Read();
+
+                            s.Name = dr.GetString(dr.GetOrdinal("Name"));
+                            s.Age = dr.GetInt32(dr.GetOrdinal("Age"));
+                            s.Role = dr.GetString(dr.GetOrdinal("Role"));
+                            s.Entry_Date = dr.GetDateTime(dr.GetOrdinal("EntryDate"));
+                            var field = (string)dr["Department"];
+                            s.Department = (Department)Enum.Parse(typeof(Department), field);
+
+                            db.Disconnect(db.getConnection);
+                            return s;
+                        }
+                    }
+                    db.Disconnect(db.getConnection);
+                    return null;
+                }
+            }
+            catch (NullReferenceException)
+            {
+                return null;
+                throw;
+            }
+        }
+
+        public void insert(Staff o)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "INSERT INTO Product (Name, Price, Quantity, Category) " +
-                                  "VALUES (@name, @price, @quantity, @category)";
+                cmd.CommandText = "INSERT INTO Staff (Name, Age, Role, EntryDate, Department)" +
+                                  "VALUES (@name, @age, @role, @entrydate, @department)";
 
                 cmd.Connection = db.getConnection;
 
                 cmd.Parameters.AddWithValue("@name", o.Name);
-                cmd.Parameters.AddWithValue("@price", o.Price);
-                cmd.Parameters.AddWithValue("@quantity", o.Quantity);
-                cmd.Parameters.AddWithValue("@category", o.Category);
+                cmd.Parameters.AddWithValue("@age", o.Age);
+                cmd.Parameters.AddWithValue("@role", o.Role);
+                cmd.Parameters.AddWithValue("@entrydate", o.Entry_Date);
+                cmd.Parameters.AddWithValue("@department", o.Department);
 
                 try
                 {
@@ -136,21 +169,22 @@ namespace Store.controllers
                     db.Disconnect(db.getConnection);
                 }
             }
+
         }
 
-        public void updateAll(long id, Product o)
+        public void updateAll(long id, Staff o)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "UPDATE Product SET Name = @name, Price = @price, Quantity = @quantity, Category = @category WHERE Id = @id";
-
+                cmd.CommandText = "UPDATE Staff SET Name = @name, Age = @age, Role = @role, EntryDate = @entrydate, Department = @department WHERE Id = @id";
                 cmd.Connection = db.getConnection;
 
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@name", o.Name);
-                cmd.Parameters.AddWithValue("@price", o.Price);
-                cmd.Parameters.AddWithValue("@quantity", o.Quantity);
-                cmd.Parameters.AddWithValue("@category", o.Category);
+                cmd.Parameters.AddWithValue("@age", o.Age);
+                cmd.Parameters.AddWithValue("@role", o.Role);
+                cmd.Parameters.AddWithValue("@entrydate", o.Entry_Date);
+                cmd.Parameters.AddWithValue("@department", o.Department);
                 db.Connect();
 
                 try
@@ -172,15 +206,16 @@ namespace Store.controllers
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "UPDATE Product SET Name = @name WHERE Id = @id";
+                cmd.CommandText = "UPDATE Staff SET Name = @name WHERE Id = @id";
                 cmd.Connection = db.getConnection;
+
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@name", name);
                 db.Connect();
 
                 try
                 {
-                    cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
                 }
                 catch (SqlException e)
                 {
@@ -194,19 +229,20 @@ namespace Store.controllers
             }
         }
 
-        public void updatePrice(long id, double price)
+        public void updateAge(long id, int age)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "UPDATE Product SET Price = @price WHERE Id = @id";
+                cmd.CommandText = "UPDATE Staff SET Age = @age WHERE Id = @id";
                 cmd.Connection = db.getConnection;
+
                 cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@age", age);
                 db.Connect();
 
                 try
                 {
-                    cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
                 }
                 catch (SqlException e)
                 {
@@ -219,19 +255,20 @@ namespace Store.controllers
             }
         }
 
-        public void updateQuantity(long id, int quantity)
+        public void updateRole(long id, string role)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "UPDATE Product SET Quantity = @quantity WHERE Id = @id";
+                cmd.CommandText = "UPDATE Staff SET Role = @role WHERE Id = @id";
                 cmd.Connection = db.getConnection;
+
                 cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@quantity", quantity);
+                cmd.Parameters.AddWithValue("@role", role);
                 db.Connect();
 
                 try
                 {
-                    cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
                 }
                 catch (SqlException e)
                 {
@@ -243,20 +280,47 @@ namespace Store.controllers
                 }
             }
         }
-
-        public void updateCategory(long id, Category category)
+        public void updateEntryDate(long id, DateTime entrydate)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "UPDATE Product SET Category = @category WHERE Id = @id";
+                cmd.CommandText = "UPDATE Staff SET EntryDate = @entrydate WHERE Id = @id";
                 cmd.Connection = db.getConnection;
+
                 cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@category", category);
+                cmd.Parameters.AddWithValue("@entrydate", entrydate);
                 db.Connect();
 
                 try
                 {
-                    cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    db.Disconnect(db.getConnection);
+                }
+
+            }
+        }
+
+        public void updateDepartment(long id, Department department)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.CommandText = "UPDATE Staff SET Department = @department WHERE Id = @id";
+                cmd.Connection = db.getConnection;
+
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@department", department);
+                db.Connect();
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
                 }
                 catch (SqlException e)
                 {
@@ -268,5 +332,6 @@ namespace Store.controllers
                 }
             }
         }
+
     }
 }

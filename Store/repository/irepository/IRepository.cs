@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Store.controllers.icontroller
+namespace Store.repository.irepository
 {
-    public interface IController<T>
+    public interface IRepository<T>
     {
 
         void insert(T o);

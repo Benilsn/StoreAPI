@@ -19,7 +19,7 @@ namespace StoreApp.Forms
         // GET BY ID STAFF
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            StaffController sc = new StaffController();
+            StaffRepository sc = new StaffRepository();
 
             try
             {

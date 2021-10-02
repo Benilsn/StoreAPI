@@ -18,7 +18,7 @@ namespace StoreApp.Forms.ProductForms
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            ProductController pc = new ProductController();
+            ProductRepository pc = new ProductRepository();
 
             try
             {

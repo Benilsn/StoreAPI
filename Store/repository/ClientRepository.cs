@@ -1,4 +1,4 @@
-﻿using Store.controllers.icontroller;
+﻿using Store.repository.irepository;
 using Store.database;
 using Store.entities;
 using System;
@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Store.controllers
 {
-    public class ClientController : IController<Client>
+    public class ClientRepository : IRepository<Client>
     {
 
         DataBase db = new DataBase();

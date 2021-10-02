@@ -7,7 +7,7 @@ namespace StoreApp.Forms.ClientForms
     public partial class ClientUpdate : Form
     {
         Form currentForm;
-        ClientController cc = new ClientController();
+        ClientRepository cc = new ClientRepository();
         public ClientUpdate()
         {
             InitializeComponent();

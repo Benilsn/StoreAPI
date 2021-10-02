@@ -8,7 +8,7 @@ namespace StoreApp.Forms.StaffForms
     public partial class StaffUpdate : Form
     {
         private Form currentForm;
-        StaffController sc = new StaffController();
+        StaffRepository sc = new StaffRepository();
 
         public StaffUpdate()
         {

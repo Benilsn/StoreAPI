@@ -55,7 +55,7 @@ namespace StoreApp.Forms.ProductForms
                 }
                 else
                 {
-                    ProductController sc = new ProductController();
+                    ProductRepository sc = new ProductRepository();
                     p.Name = nameTb.Text;
                     p.Price = double.Parse(priceTb.Text);
                     p.Quantity = (int)quantityNUD.Value;

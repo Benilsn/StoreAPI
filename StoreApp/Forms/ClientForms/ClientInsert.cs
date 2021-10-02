@@ -9,7 +9,7 @@ namespace StoreApp.Forms.ClientForms
     public partial class ClientInsert : Form
     {
 
-        ClientController cc = new ClientController();
+        ClientRepository cc = new ClientRepository();
         public ClientInsert()
         {
             InitializeComponent();

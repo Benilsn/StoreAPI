@@ -9,7 +9,7 @@ namespace StoreApp.Forms.ProductForms
     {
 
         private Form currentForm;
-        ProductController pc = new ProductController();
+        ProductRepository pc = new ProductRepository();
         public ProductUpdate()
         {
             InitializeComponent();

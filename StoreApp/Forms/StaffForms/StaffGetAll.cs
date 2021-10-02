@@ -23,7 +23,7 @@ namespace StoreApp.Forms.StaffForms
 
         private void staffGetAll()
         {
-            StaffController sc = new StaffController();
+            StaffRepository sc = new StaffRepository();
             DataBase db = new DataBase();
             try
             {

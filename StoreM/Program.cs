@@ -8,8 +8,8 @@ namespace StoreM
         static void Main(string[] args)
         {
 
-            StaffController sc = new StaffController();
-            ProductController pc = new ProductController();
+            StaffRepository sc = new StaffRepository();
+            ProductRepository pc = new ProductRepository();
 
             Console.WriteLine(sc.getById(203051));
 

@@ -10,7 +10,7 @@ namespace StoreApp.Forms.StaffForms
     public partial class StaffInsert : Form
     {
 
-        StaffController sc = new StaffController();
+        StaffRepository sc = new StaffRepository();
 
         public StaffInsert()
         {

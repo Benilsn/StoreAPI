@@ -18,7 +18,7 @@ namespace StoreApp.Forms.ClientForms
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            ClientController cc = new ClientController();
+            ClientRepository cc = new ClientRepository();
 
             try
             {
