@@ -1,4 +1,4 @@
-﻿using Store.controllers;
+﻿using Store.repository;
 using Store.database;
 using System.Data;
 using System.Data.SqlClient;

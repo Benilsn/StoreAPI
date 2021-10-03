@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console", "StoreM\Console.c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "Store\Store.csproj", "{13F18DA9-C115-4A7D-A83B-4FCD4AF2D27B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreApp", "StoreApp\StoreApp.csproj", "{078E3FEE-6515-4818-8D00-D03B6EA4614D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreForm", "StoreApp\StoreForm.csproj", "{078E3FEE-6515-4818-8D00-D03B6EA4614D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{72D083D2-0151-43DF-B36F-14BE6D7F3A2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{078E3FEE-6515-4818-8D00-D03B6EA4614D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{078E3FEE-6515-4818-8D00-D03B6EA4614D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{078E3FEE-6515-4818-8D00-D03B6EA4614D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D083D2-0151-43DF-B36F-14BE6D7F3A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D083D2-0151-43DF-B36F-14BE6D7F3A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D083D2-0151-43DF-B36F-14BE6D7F3A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D083D2-0151-43DF-B36F-14BE6D7F3A2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

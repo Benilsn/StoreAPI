@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace Store.controllers
+namespace Store.repository
 {
     public class ProductRepository : IRepository<Product>
     {
